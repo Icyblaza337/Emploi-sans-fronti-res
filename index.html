@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emploi Sans Frontières</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5fa;
+  color: #14213d;
+}
+header {
+  background: #10203b;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+header h1 { font-size: 25px; }
+header p { color: #e8bc65; }
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+}
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+}
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+button {
+  background: #10203b;
+  color: white;
+  cursor: pointer;
+}
+.offer {
+  border-left: 4px solid #e8bc65;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌍 EMPLOI SANS FRONTIÈRES</h1>
+  <p>L'emploi n'a pas de frontières.</p>
+  <p>Afrique · Europe · Amérique · Asie</p>
+</header>
+<main>
+  <section>
+    <h2>Rechercher un emploi</h2>
+    <input id="metier" placeholder="Métier recherché">
+    <select id="pays">
+      <option value="">Tous les pays</option>
+      <option>Bénin</option>
+      <option>Togo</option>
+      <option>Côte d'Ivoire</option>
+      <option>Sénégal</option>
+      <option>Ghana</option>
+      <option>France</option>
+      <option>Belgique</option>
+      <option>Canada</option>
+      <option>Allemagne</option>
+      <option>Maroc</option>
+    </select>
+    <button onclick="rechercher()">Rechercher</button>
+    <p id="resultat"></p>
+  </section>
+  <section class="offer">
+    <h2>Bienvenue !</h2>
+    <p>Les offres d'emploi vérifiées en Afrique et à l'international seront publiées ici.</p>
+    <p>Reviens bientôt pour découvrir les opportunités.</p>
+  </section>
+</main>
+<footer>
+  © 2026 Emploi Sans Frontières
+</footer>
+<script>
+function rechercher() {
+  const metier = document.getElementById('metier').value;
+  const pays = document.getElementById('pays').value;
+  document.getElementById('resultat').textContent =
+    'Recherche : ' + (metier || 'Tous les métiers') +
+    ' — Pays : ' + (pays || 'Tous les pays') +
+    '. Les offres seront connectées prochainement.';
+}
+</script>
+</body>
+</html>
